@@ -126,6 +126,10 @@
 #if !defined(AP4_CONFIG_NO_EXCEPTIONS)
 #define AP4_CONFIG_NO_EXCEPTIONS
 #endif
+#if __ANDROID_API__ < 24
+#define AP4_fseek fseek
+#define AP4_ftell ftell
+#endif
 #endif
 
 /* Emscripten */
